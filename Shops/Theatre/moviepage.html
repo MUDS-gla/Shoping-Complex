@@ -1,0 +1,254 @@
+<html>
+    <head>
+        <title>Movies</title>
+        <style>
+            img {
+            float: left;
+            width: 32%;
+            padding: 5px 4px;
+            height: 250px;
+            }
+            h3 {
+            text-align: center;
+            display: inline;
+            width: 32.5%;
+            float: left;
+            background-color: rgb(241, 209, 103);
+            margin: 0;
+            height: 4%;
+            }
+            h2 {
+            color: red;
+             max-width: 5;
+            }
+            .same {
+            max-width: 4;
+            }
+            button.back{
+                position:fixed;
+                bottom:0;
+                text-decoration:none;
+                display: inline-block;
+                margin: 0;
+                max-width:none;
+                padding:2px;
+                left:50%;
+            }
+            .move {
+            text-align: center;
+            display: inline;
+            width: 16.2%;
+            float: left;
+            background-color: rgb(196, 238, 157);
+            margin: 0;
+            height: 6%;
+            }
+            .monitor {
+            width: 28%;
+            border: 5px solid black;
+            position: fixed;
+            right: 420px;
+            bottom: 150px;
+            display: inline-block;
+            height: 250px;
+            background-color: cornsilk;
+            visibility: hidden;
+            }
+            th.box{
+            font-size:large;
+            font-family: Arial, Helvetica, sans-serif;
+            font-style: italic;
+            font-weight: 100;
+            color:red;
+            }
+        </style>
+
+<script>
+    function effect(value) {
+        var x = document.getElementsByClassName("move_mouse");
+        var a = document.getElementById("id1");
+        var c = document.getElementById("id3");
+        var y = document.getElementsByClassName("monitor");
+        if (x[0].id == value) {
+            a.innerHTML = "Baaghi 3";
+            c.innerHTML = "In a twisted turn of events, when a group of deadly terrorists kidnap Ronnie's elder brother in Syria, he sets off on a mission to bring him back.";
+            y[0].style.visibility = "visible";
+            b.style.filter = "brightness(1)"
+        } else if (x[1].id == value) {
+            a.innerHTML = "Verappan";
+            c.innerHTML = "Based on the life of infamous sandalwood dacoit, Veerappan, the film charts the events leading to Operatio";
+            y[0].style.visibility = "visible";
+            b.style.filter = "brightness(1)"
+        } else if (x[2].id == value) {
+            a.innerHTML = "Dishoom";
+            c.innerHTML = "A no-nonsense cop accompanied by a rookie go on a 36-hour manhunt for a missing Indian cricketer, who has been kidnapped under mysterious circumstances.";
+            y[0].style.visibility = "visible";
+            b.style.filter = "brightness(1)"
+        } else if (x[3].id == value) {
+            a.innerHTML = "The Big Bull ";
+            c.innerHTML = "During the late '80s, Hemant Shah, the man with the Midas touch, pulled off the biggest hustle that shook India's financial fabric. Inspired by true events.";
+            y[0].style.visibility = "visible";
+            b.style.filter = "brightness(1)"
+
+        } else if (x[4].id == value) {
+            a.innerHTML = "Atrangi Re";
+            c.innerHTML = "Runaway Rinku gets forcefully married to an already engaged Vishu. The love triangle gets weirder when Rinku's lover Sajjad shows up.";
+            y[0].style.visibility = "visible";
+            b.style.filter = "brightness(1)"
+        } else if (x[5].id == value) {
+            a.innerHTML = "Chichhore";
+            c.innerHTML = "Divided by time, united by a tragic incident. In a bittersweet reunion, seven middle-aged friends take a walk down the memory lane at the least expected place.";
+            y[0].style.visibility = "visible";
+            b.style.filter = "brightness(1)"
+        } else if (x[6].id == value) {
+            a.innerHTML = "Housefull 4";
+            c.innerHTML = "A set of six lovers had to part ways in 1419. Six centuries later, they meet again only to realise that they are marrying the wrong partners. Old villains and a series of mishaps turn this reincarnation drama into a comedy of errors.";
+            y[0].style.visibility = "visible";
+            b.style.filter = "brightness(1)"
+        } else if (x[7].id == value) {
+            a.innerHTML = "Total Dhamaal";
+            c.innerHTML = "When 50 million bucks are at stake, six eccentric people will do whatever it takes, including braving the wild. Who will win this race against time?";
+            y[0].style.visibility = "visible";
+            b.style.filter = "brightness(1)"
+        } else if (x[8].id == value) {
+            a.innerHTML = "Bhadaai Ho";
+            c.innerHTML = "Getting a new sibling at 25 is the last thing Nakul expected. Will he ever come to terms with the embarrassing 'good news' of his parents being pregnant?";
+            y[0].style.visibility = "visible";
+            b.style.filter = "brightness(1)"
+        } 
+    }
+
+    function effectout() {
+        var y = document.getElementsByClassName("monitor");
+        var b = document.getElementById("id2");
+        y[0].style.visibility = "hidden";
+        b.style.filter = "invert(1)";
+
+    }
+</script>
+    </head>
+    <body>
+        <div>
+            <h1 id="top"><u><center>MOVIES</center></u></h1>
+        </div>
+        <div>
+            <button type="submit"><a href="../index.php">HOME</button>
+            <button type="submit"><a href="#action">ACTION</button>
+            <button type="submit"><a href="#drama">DRAMA</button>
+            <button type="submit"><a href="#comedy">COMEDY</button>
+        </div>
+        <div>
+        <p><center><h1 id="action" class="same">ACTION</center></h1>
+            <div>
+
+                <h3>Baaghi 3</h3>
+                <h3>Verappan</h3>
+                <h3>Dishoom</h3>
+            </div>
+            <div>
+                <img class="move_mouse" onmouseover="effect(this.id)" onmouseout="effectout()" src="images/movie1.jpg" id="image0">
+                <img class="move_mouse" onmouseover="effect(this.id)" onmouseout="effectout()" src="images/movie2.jpg" id="image1">
+                <img class="move_mouse" onmouseover="effect(this.id)" onmouseout="effectout()" src="images/movie3.jpg" id="image2">
+            </div>
+            <div>
+                <p><form method="post" action="movieform.php">
+                        <input type="hidden" value="Monday" name="day">
+                        <input type="hidden" value="11:00am-2:00pm" name="time">
+                    <button type="submit" class="move"><a href="https://www.youtube.com/watch?v=F2lN25IayH8">TRAILER</a></button>
+                    <button type="submit" class="move" name="movie" value="Baaghi 3"> BUY </button></form>
+                    <form method="post" action="movieform.php">
+                        <input type="hidden" value="Tuesday" name="day">
+                        <input type="hidden" value="11:00am-2:00pm" name="time">
+                    <button type="submit" class="move"><a href="https://youtu.be/odSNLv_q1dk">TRAILER</a></button>
+                    <button type="submit" class="move" name="movie" value="Verappan"> BUY </button></form>
+                    <form method="post" action="movieform.php">
+                        <input type="hidden" value="Wednesday" name="day">
+                        <input type="hidden" value="11:00am-2:00pm" name="time">
+                    <button type="submit" class="move"><a href="https://youtu.be/DU6IdS2gVog">TRAILER</a></button>
+                    <button type="submit" class="move" name="movie" value="Dishoom"> BUY </button>
+                </form>
+            </p>
+            </div>
+        </div>
+        <div>
+            <p><center><h1 id="drama" class="same">DRAMA</center></h1>
+                <div>
+    
+                    <h3>The Big Bull</h3>
+                    <h3>Atrangi Re</h3>
+                    <h3>Chichhore</h3>
+                </div>
+                <div>
+                    <img class="move_mouse" onmouseover="effect(this.id)" onmouseout="effectout()" src="images/movie4.jpg" id="image3">
+                    <img class="move_mouse" onmouseover="effect(this.id)" onmouseout="effectout()" src="images/movie5.jpg" id="image4">
+                    <img class="move_mouse" onmouseover="effect(this.id)" onmouseout="effectout()" src="images/movie6.jpg" id="image5">
+            </div>
+            <div>
+                <p><form method="post" action="movieform.php">
+                        <input type="hidden" value="Thursday" name="day">
+                        <input type="hidden" value="11:00am-2:00pm" name="time">
+                    <button type="submit" class="move"><a href="https://youtu.be/Bw6I-KgCSP4">TRAILER</a></button>
+                    <button type="submit" class="move" name="movie" value="The Big Bull"> BUY </button></form>
+                    <form method="post" action="movieform.php">
+                        <input type="hidden" value="Friday" name="day">
+                        <input type="hidden" value="11:00am-2:00pm" name="time">
+                    <button type="submit" class="move"><a href="https://youtu.be/x3oMm5JGXZM">TRAILER</a></button>
+                    <button type="submit" class="move" name="movie" value="Atrangi Re"> BUY </button></form>
+                    <form method="post" action="movieform.php">
+                        <input type="hidden" value="Saturday" name="day">
+                        <input type="hidden" value="11:00am-2:00pm" name="time">
+                    <button type="submit" class="move"><a href="https://youtu.be/tsxemFX0a7k">TRAILER</a></button>
+                    <button type="submit" class="move" name="movie" value="Chichore"> BUY </button></form>
+                </p>
+            </div>
+            <div>
+                <p><center><h1 id="comedy" class="same">COMEDY</center></h1>
+                    <div>
+        
+                        <h3>Housefull 4</h3>
+                        <h3>Total Dhamaal</h3>
+                        <h3>Badhaai Ho</h3>
+                    </div>
+                    <div>
+                        <img class="move_mouse" onmouseover="effect(this.id)" onmouseout="effectout()" src="images/movie7.jpg" id="image6">
+                        <img class="move_mouse" onmouseover="effect(this.id)" onmouseout="effectout()" src="images/movie8.jpg" id="image7">
+                        <img class="move_mouse" onmouseover="effect(this.id)" onmouseout="effectout()" src="images/movie9.jpg" id="image8">
+            
+                <div>
+                    <p><form method="post" action="movieform.php">
+                        <input type="hidden" value="Sunday" name="day">
+                        <input type="hidden" value="11:00am-2:00pm" name="time">
+                        <button type="submit" class="move"><a href="https://youtu.be/gcHH34cEl3Y">TRAILER</a></button>
+                        <button type="submit" class="move" name="movie" value="Housefull 4"> BUY </button></form>
+                        <form method="post" action="movieform.php">
+                            <input type="hidden" value="Monday" name="day">
+                            <input type="hidden" value="5:00pm:8:00pm" name="time">
+                        <button type="submit" class="move"><a href="https://youtu.be/fo9EhcwQXcM">TRAILER</a></button>
+                        <button type="submit" class="move" name="movie" value="Total Dhamaal"> BUY </button></form>
+                        <form method="post" action="movieform.php">
+                            <input type="hidden" value="Tuesady" name="day">
+                            <input type="hidden" value="5:00pm-8:00pm" name="time">
+                        <button type="submit" class="move"><a href="https://youtu.be/hjxoPh4DM_A">TRAILER</a></button>
+                        <button type="submit" class="move" name="movie" value="Badhaai Ho"> BUY </button></form>
+                    </p>
+                </div>
+                </div>
+                <div>
+                    <center><button type="submit"><a href="#top">BACK TO TOP</button></center>
+                    <br>
+                </div>
+                <div class="monitor">
+                    <table align="center">
+                        <tr>
+                            <th id="id1" class="box">my name is shiva srivastava<br></th>
+                        </tr>
+                        <tr>
+                            <th id="id3">Muskan is my group member</th>
+                        </tr>
+                    </table>
+                </div>
+    
+
+        
+    </body>
+</html>
