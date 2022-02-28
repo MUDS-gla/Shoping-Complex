@@ -199,7 +199,7 @@
         <a class=shops href="#">Pharmacies</a><br>
         <a class=shops href="#">Technologies</a><br>
         <a class=shops href="#">Services<a><br>
-        <a class=shops href="Shops/sports/sports.php">Sports</a><br>
+        <a class=shops href="Shops/sports/sports_home.php">Sports</a><br>
         <a class=shops href="gym.php">Gym</a><br>
             </div>
 
