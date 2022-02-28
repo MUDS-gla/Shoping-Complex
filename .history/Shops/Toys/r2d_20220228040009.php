@@ -12,11 +12,10 @@
     
     echo "<bR><center><a href=javascript:history.go(-1)>Back</a></center>";
     session_start();
-    $_SESSION['oname']="rat1";
-    $_SESSION['oprice']=500;
-    
+    $_SESSION['oname']="rat2";
+    $_SESSION['oprice']="1000";
     ?>
-<img src=rattlers1.jpg height=300px width=300px>
+<img src=rattlers2.jpg height=300px width=300px>
 
 <h3>Details</h3>
 
@@ -26,7 +25,7 @@
             Price
         </td>
         <td>
-            Rs. 500
+            Rs. 1000
         </td>
     </tr>
     <tr>
@@ -79,7 +78,7 @@
    <button type="submit" name="price" value='500'>Buy Now</button>
    </form>
      <br>
-   <a href=../addtocart.php> <button>Add to cart</button></a>
+   <a href=addtocart.php> <button>Add to cart</button></a>
 
 </body>
 </html>

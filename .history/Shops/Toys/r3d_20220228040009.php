@@ -8,15 +8,22 @@
              </style>
        </head>
 <body>
+    
     <?php
+    session_start();
+    $_SESSION['oname']="rat3";
+    $_SESSION['oprice']="9000";
     
     echo "<bR><center><a href=javascript:history.go(-1)>Back</a></center>";
-    session_start();
-    $_SESSION['oname']="rat1";
-    $_SESSION['oprice']=500;
-    
+    if(isset($_SESSION['state'])){
+        echo "<a href=../../index.php>Home</a>";
+    }
+    else{
+        
+        echo "<a href=../../index2.php>Home</a>";
+    }
     ?>
-<img src=rattlers1.jpg height=300px width=300px>
+<img src=rattlers3.jpg height=300px width=300px>
 
 <h3>Details</h3>
 
@@ -26,7 +33,7 @@
             Price
         </td>
         <td>
-            Rs. 500
+            Rs. 9000
         </td>
     </tr>
     <tr>
@@ -79,7 +86,7 @@
    <button type="submit" name="price" value='500'>Buy Now</button>
    </form>
      <br>
-   <a href=../addtocart.php> <button>Add to cart</button></a>
+   <a href=addtocart.php> <button>Add to cart</button></a>
 
 </body>
 </html>

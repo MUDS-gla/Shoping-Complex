@@ -79,7 +79,7 @@
    <button type="submit" name="price" value='500'>Buy Now</button>
    </form>
      <br>
-   <a href=../addtocart.php> <button>Add to cart</button></a>
+   <a href=addtocart.php> <button>Add to cart</button></a>
 
 </body>
 </html>
